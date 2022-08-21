@@ -1,7 +1,7 @@
 import styles from 'BookApp.module.css';
 const BookAppnt = () => {
     return (
-        <div className={styles.book}>
+        <form className={styles.book}>
             <h1>Book Appointment</h1>
             <div>
                 <label htmlFor="firstname">Name: </label>
@@ -33,7 +33,7 @@ const BookAppnt = () => {
             </div>
 
 
-        </div>
+        </form>
     );
 }
 
