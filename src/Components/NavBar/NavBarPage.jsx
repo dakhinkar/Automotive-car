@@ -1,21 +1,20 @@
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
-
-
+import { FaCar } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 const NavBarPage = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Automotive</Navbar.Brand>
+                <Navbar.Brand as={NavLink} to='/'><FaCar /> Automotive</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className='me-auto'>
                     </Nav>
-
                     <Nav >
-                        <Nav.Link href="#features">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Price</Nav.Link>
-                        <Nav.Link href="#pricing">Contact</Nav.Link>
+                        <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
+                        <Nav.Link as={NavLink} to='/features'>Features</Nav.Link>
+                        <Nav.Link as={NavLink} to='/price'>Price</Nav.Link>
+                        <Nav.Link as={NavLink} to='/contact'>Contact</Nav.Link>
                     </Nav>
                     <Button variant="primary">Book Appointment</Button>
                 </Navbar.Collapse>
