@@ -5,11 +5,12 @@
   background-image: url('./Components/Images/bg.jpg');  
   background-size: cover;
   background-repeat: no-repeat; 
+  background-attachment: fixed;
   background-position: top left;
+  overflow: hidden;
 }
 
-.navbar{
-  
+.navbar{  
   font-size: 1.5rem;
   font-weight: bold;
   z-index: 1;
@@ -25,24 +26,10 @@
 .navbar a{
   color: white;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 991px) {
+  .navbar {
+    text-align: left;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
